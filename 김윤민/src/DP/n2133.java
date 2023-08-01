@@ -31,7 +31,7 @@ public class n2133 {
 				dp[i] += dp[i - j] * 2;// 2 : 해당 영역 나눔에서 새로운 경우의 수
 				// dp[i-j] : 해당 영역의 경우의 수.
 			}
-		}
+		} 
 		System.out.println(dp[n]);
 	}
 
