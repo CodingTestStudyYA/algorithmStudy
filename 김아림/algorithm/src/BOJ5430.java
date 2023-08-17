@@ -76,7 +76,6 @@ public class BOJ5430 {
                 }
                 if(sb.length() > 1) {
                     sb.setLength(sb.length()-1);
-
                 }
                 sb.append("]");
                 System.out.println(sb);
