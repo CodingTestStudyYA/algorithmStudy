@@ -74,7 +74,10 @@ public class BOJ5430 {
                     else
                         sb.append(deque.pollFirst()).append(",");
                 }
-                sb.setLength(sb.length()-1);
+                if(sb.length() > 1) {
+                    sb.setLength(sb.length()-1);
+
+                }
                 sb.append("]");
                 System.out.println(sb);
             }
