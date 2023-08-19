@@ -2,7 +2,7 @@ package swea;
 
 import java.io.*;
 import java.util.*;
-
+//특이한 자석
 public class n4013 {
 	static int k, cnt;
 	static int[][] magnet;
