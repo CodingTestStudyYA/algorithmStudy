@@ -17,7 +17,7 @@ public class BOJ20055 {
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
         power = new int[2*N];
-        robot = new boolean[2*N];
+        robot = new boolean[N];
 
         st = new StringTokenizer(br.readLine());
         for(int i = 0; i < 2*N; i++){
