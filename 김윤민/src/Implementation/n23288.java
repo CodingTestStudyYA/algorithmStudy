@@ -18,9 +18,9 @@ public class n23288 {
 	static int N, M, K;
 	static int[][] map;
 	static int[] dice = {1,3,4,5,2,6}; // top, east, west, south, north, bottom
-	static int dir = 0; // 동서남북 0~3
-	static int[] dx = { 1, -1, 0, 0 }; // 동서남북
-	static int[] dy = { 0, 0, 1, -1 };
+	static int dir = 0; // 동남서북 0~3
+	static int[] dx = { 1, 0,-1,0 }; // 동남서북
+	static int[] dy = { 0, 1, 0, -1 };
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -42,13 +42,13 @@ public class n23288 {
 		int cnt = 0;
 		int result = 0;
 		while (cnt < K) {
-			cnt++;
 			int ny = y + dy[dir]; //해당방향으로 이동
 			int nx = x + dx[dir];
-			if (can(ny, nx)) { //가능하면
-				if(dir==0) turnEast(); //주사위 굴린다
-				else if(dir==1) turnWest();
-				else if(dir==2) turnSouth();
+			if (can(ny, nx)) { //가능하면 
+				cnt++;
+				if(dir==0) turnEast(); //주사위 굴린다 동남서북
+				else if(dir==1) turnSouth();
+				else if(dir==2) turnWest();
 				else if(dir==3) turnNorth();
 				
 				int A = dice[5]; // bottom값
@@ -62,10 +62,9 @@ public class n23288 {
 				} else if (A < B) { // 90도 반시계방향
 					setDir(-1);
 				} // 같으면 방향 전환 없음
+				
 			} else {
 				converse(); // 방향 전환
-				cnt--;//횟수 카운트 내리고 다시 진행
-				continue;
 			}
 		}
 		System.out.println(result);
@@ -95,29 +94,17 @@ public class n23288 {
 	}
 
 	static void setDir(int round) { //1: 시계, -1 : 반시계
-		if(round ==1) { //동남서북동 , 동 0 서 1 남 2 북 3
-			if(dir==0) dir=2; //동->남
-			else if(dir==1) dir=3;
-			else if(dir==2) dir=1;
-			else if(dir==3) dir=0;
+		if(round ==1) { //동남서북동 , 동 0 남 1 서 2 북 3
+			dir= (dir+1)%4;
 		}else if(round ==-1) { //동북서남동
-			if(dir==0) dir=3;
-			else if(dir==1) dir=2;
-			else if(dir==2) dir=0;
-			else if(dir==3) dir=1;
+			dir = (dir+3)%4;
 		}
 		
 	}
 
-	static void converse() { // 역방향
-		if (dir == 0)
-			dir = 1;
-		else if (dir == 1)
-			dir = 0;
-		else if (dir == 2)
-			dir = 3;
-		else if (dir == 3)
-			dir = 2;
+	static void converse() { // 역방향 동0 남 1 서 2 북 3
+		if(dir<2) dir=dir+2;
+		else dir = dir-2;
 	}
 
 	// 주사위 이동
