@@ -41,15 +41,12 @@ public class BOJ23288 {
 
         // map을 기준으로 동쪽은 아래로, 남쪽은 오른쪽으로 가는 것임
         dir = 0; // 지금 동쪽으로 시작
-        int k = 0; // 돌린 횟수 저장하기
 
         // 시작할때 내가 있는 위치가 (1,1)임
         int ny = 1;
         int nx = 1;
 
-
-        while (k++ < K) {
-
+        for(int i = 0; i < K; i++){
             nx += dx[dir];
             ny += dy[dir];
 
