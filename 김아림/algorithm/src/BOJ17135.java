@@ -20,10 +20,6 @@ public class BOJ17135 {
         }
     }
 
-    // 궁수둘은 조합을 통해서 위치파악
-    // 적들은 리스트에 넣어놓고 돌기
-    // 한 적을 여러 궁수가 쏠 수 있음 -> 리스트에서 바로바로 지워버리면 안됨.
-    // 거리가 가까운순 - x값이 작은 순이므로 우선순위 큐 사용할때 compareTo 고려하기
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int N, M, D;
