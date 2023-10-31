@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.stream.*;
 
 
-class Solution {
+class Programmers_택배배달과수거 {
 
 
     class House{
