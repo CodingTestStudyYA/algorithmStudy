@@ -2,7 +2,7 @@
 import java.util.*;
 import java.io.*;
 
-class Solution {
+class Programmers_카카오프렌즈컬러링북 {
 
     static int[] dx = {1,-1,0,0};
     static int[] dy = {0,0,1,-1};

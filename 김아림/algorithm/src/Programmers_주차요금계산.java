@@ -26,8 +26,8 @@ class Solution {
                 String[] outT = infos[0].split(":");
                 // 출차 시간 가져오기 
 
-                int hour = Integer.parseInt(outTime[0]) - Integer.parseInt(inTime[0]);
-                int minute = Integer.parseInt(outTime[1]) - Integer.parseInt(inTime[1]);
+                int hour = Integer.parseInt(outT[0]) - Integer.parseInt(inT[0]);
+                int minute = Integer.parseInt(outT[1]) - Integer.parseInt(inT[1]);
 
                 fee_record.replace(infos[1], fee_record.get(infos[1]) + 60 * hour + minute);
                 // 요금에서 차번호에 대해서, 현재 차에 대한 시간 더해주기 
