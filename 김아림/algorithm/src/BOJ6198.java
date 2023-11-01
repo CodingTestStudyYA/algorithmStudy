@@ -7,6 +7,7 @@ public class BOJ6198 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
+
         // 스택 쓰면서 하나씩 빼기 .. ?
         // 순서를 유지해야
         // stack -> 뒤에서 부터 생각 ㅠㅠ
