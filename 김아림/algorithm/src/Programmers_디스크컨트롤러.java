@@ -3,7 +3,6 @@ import java.io.*;
 import java.util.*;
 
 class Programmers_디스크컨트롤러 {
-
     static class Task {
 
         int start, time, idx;
