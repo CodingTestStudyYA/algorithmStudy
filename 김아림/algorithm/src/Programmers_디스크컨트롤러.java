@@ -3,16 +3,6 @@ import java.io.*;
 import java.util.*;
 
 class Programmers_디스크컨트롤러 {
-    static class Task {
-
-        int start, time, idx;
-
-        Task(int start, int time, int idx) {
-            this.start = start;
-            this.time = time;
-            this.idx = idx;
-        }
-    }
 
     public int solution(int[][] jobs) {
 
